@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=80, verbose_name='title', blank=True)),
                 ('keywords', models.CharField(max_length=250, verbose_name='keywords', blank=True)),
                 ('description', models.TextField(verbose_name='description', blank=True)),
-                ('content_type', models.ForeignKey(to='contenttypes.ContentType', null=True)),
+                ('content_type', models.ForeignKey(to='contenttypes.ContentType', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'ordering': ('id',),
